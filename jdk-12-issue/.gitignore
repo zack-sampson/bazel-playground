@@ -1,0 +1,4 @@
+bazel-bin
+bazel-jdk-12-issue
+bazel-out
+bazel-testlogs
