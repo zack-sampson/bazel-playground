@@ -1,4 +1,4 @@
-# Kotlin Bazel Rule Failure Cases
+# Bazel Rule Failure Cases
 
 These are some examples of failing cases for the kt_jvm_library rule. They're about as simple as I can make them (afaik).
 

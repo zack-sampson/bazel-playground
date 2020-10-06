@@ -1,23 +1,12 @@
-load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "define_kt_toolchain")
-
-define_kt_toolchain(
-    name = "kotlin_toolchain",
-    api_version = "1.3",  # "1.1", "1.2", or "1.3"
-    jvm_target = "11",  # "1.6", "1.8", "9", "10", "11", or "12",
-    language_version = "1.3",  # "1.1", "1.2", or "1.3"
-)
-
-load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_jvm_library")
-
 java_library(
     name = "example",
     srcs = ["ExampleInterface.java"],
-    deps = ["immutables_processor"],
+    deps = [":immutables_processor"],
 )
 
-kt_jvm_library(
+java_library(
     name = "helloworld",
-    srcs = ["HelloWorld.kt"],
+    srcs = ["HelloWorld.java"],
     deps = [":example"],
 )
 
